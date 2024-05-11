@@ -101,7 +101,7 @@ on fs
     write /sys/kernel/mm/swap/vma_ra_enabled false
     write /proc/sys/vm/vfs_cache_pressure 130
     write /proc/sys/vm/dirty_writeback_centisecs 300
-    swapon_all /vendor/fstab.mt6768
+    swapon_all /vendor/etc/fstab.mt6768
 
 on post-fs
     # boot perf. tune
