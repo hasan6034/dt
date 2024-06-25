@@ -93,7 +93,9 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.6.vendor
+    android.hardware.camera.provider@2.6.vendor \
+    libexif.vendor:64 \
+    libpng.vendor:64
 
 # ConsumerIr
 PRODUCT_PACKAGES += \
@@ -113,7 +115,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libdrm.vendor \
-    libutils-v32
+    libion.vendor \
+    libui.vendor \
+    libunwindstack.vendor \
+    libutils-v32 \
+    libutilscallstack.vendor
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -140,14 +146,18 @@ PRODUCT_PACKAGES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
-    android.hardware.gatekeeper@1.0-service
+    android.hardware.gatekeeper@1.0-service \
+    android.hardware.gatekeeper@1.0-impl \
+    libgatekeeper.vendor:64
 
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss-V1-ndk.vendor \
-    android.hardware.gnss@2.1.vendor
+    android.hardware.gnss@2.1.vendor \
+    libcurl.vendor:64 \
+    libexpat.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -157,6 +167,7 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
+    libhidlmemory.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder.vendor
@@ -347,6 +358,7 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-common
 
 PRODUCT_PACKAGES += \
+    libnetutils.vendor:64 \
     libshim_sink \
     libui_shim
 
@@ -378,6 +390,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi-multihal \
     android.frameworks.sensorservice@1.0.vendor \
+    libpower.vendor:64 \
     libsensorndkbridge \
     libshim_sensors
 
