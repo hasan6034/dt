@@ -76,6 +76,10 @@ function blob_fixup {
 	system_ext/lib64/libsink.so)
             "${PATCHELF}" --add-needed "libshim_sink.so" "$2"
             ;;
+	vendor/lib*/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
+	    grep -q "libutils.so" "${2}" && \
+	    "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+	    ;;
         vendor/lib*/hw/vendor.mediatek.hardware.pq@2.13-impl.so)
             "$PATCHELF" --replace-needed "libutils.so" "libutils-v32.so" "$2"
             ;;
