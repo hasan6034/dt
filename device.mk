@@ -92,8 +92,26 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.device@3.6.vendor \
+    android.hardware.camera.provider@2.4 \
+    android.hardware.camera.provider@2.4.vendor \
+    android.hardware.camera.provider@2.5 \
+    android.hardware.camera.provider@2.5.vendor \
+    android.hardware.camera.provider@2.6 \
     android.hardware.camera.provider@2.6.vendor \
+    android.hardware.camera.device@3.2 \
+    android.hardware.camera.device@3.2.vendor \
+    android.hardware.camera.device@3.3 \
+    android.hardware.camera.device@3.3.vendor \
+    android.hardware.camera.device@3.4 \
+    android.hardware.camera.device@3.4.vendor \
+    android.hardware.camera.device@3.5 \
+    android.hardware.camera.device@3.5.vendor \
+    android.hardware.camera.device@3.6 \
+    android.hardware.camera.device@3.6.vendor
+
+PRODUCT_PACKAGES += \
+    libcamera_metadata_shim \
+    libcamera_metadata.vendor \
     libexif.vendor:64 \
     libpng.vendor:64
 
@@ -401,7 +419,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.1-service.xiaomi-multihal \
+    android.hardware.sensors-service.xiaomi-multihal \
     android.frameworks.sensorservice@1.0.vendor \
     libpower.vendor:64 \
     libsensorndkbridge \
@@ -416,6 +434,8 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/mediatek/libmtkperf_client \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
@@ -430,8 +450,7 @@ PRODUCT_COPY_FILES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
+    android.hardware.usb-service.mediatek-legacy
 
 # Vibrator
 PRODUCT_PACKAGES += \
