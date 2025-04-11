@@ -135,7 +135,13 @@ PRODUCT_PACKAGES += \
     libion.vendor \
     libui.vendor \
     libunwindstack.vendor \
-    libutilscallstack.vendor
+    libutilscallstack.vendor \
+    libgralloctypes.vendor \
+    libprocessgroup.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor \
+    libssl.vendor \
+    libtinyxml
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -227,6 +233,12 @@ PRODUCT_COPY_FILES += \
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
+
+PRODUCT_PACKAGES += \
+    libprocessgroup_shim \
+    libshim_audio \
+    libbase_shim \
+    libshim_beanpod \
 
 # Media
 PRODUCT_PACKAGES += \
@@ -432,7 +444,8 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     libpower.vendor:64 \
     libsensorndkbridge \
-    libshim_sensors
+    libshim_sensors \
+    libshim_watermark
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
