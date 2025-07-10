@@ -50,25 +50,33 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
+    android.hardware.audio@7.0.vendor:64 \
+    libmemunreachable.vendor
+
+PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio.effect@7.0-impl \
+    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32 \
     android.hardware.soundtrigger@2.3-impl:32
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
+    audio.bluetooth.default:32 \
     audio.primary.default \
     audio.r_submix.default \
     audio.usb.default \
     audio_policy.stub
 
 PRODUCT_PACKAGES += \
-    libaudiofoundation.vendor \
-    libalsautils \
-    libnbaio_mono \
-    libtinycompress \
-    libdynproc \
-    libhapticgenerator
+    libaudiofoundation.vendor:32 \
+    libalsautils:32 \
+    libnbaio_mono:32 \
+    libtinycompress:32 \
+    libdynproc:32 \
+    libhapticgenerator:32
+
+# Ladder
+PRODUCT_PACKAGES += \
+    libunwindstack.vendor
 
 PRODUCT_PACKAGES += \
     BesLoudness \
@@ -86,9 +94,9 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-impl:32 \
     android.hardware.bluetooth@1.1.vendor \
-    libbluetooth_audio_session
+    libbluetooth_audio_session:32
 
 # Camera
 PRODUCT_PACKAGES += \
