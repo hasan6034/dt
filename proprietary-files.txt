@@ -7,6 +7,7 @@ vendor/lib64/libaedv.so
 # Audio
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
+vendor/lib/hw/awinic.audio.effect.so
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
@@ -475,6 +476,7 @@ vendor/etc/audio_param_k19a_ce/Volume_ParamUnitDesc.xml
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
+vendor/etc/init/init.bt_drv.rc
 vendor/firmware/BT_FW.cfg
 vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib/libbluetooth_mtk.so
@@ -798,6 +800,7 @@ vendor/lib64/hw/consumerir.common.so
 # Connectivity
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
+vendor/etc/init/init.connfem.rc
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/init.wmt_drv.rc
 vendor/firmware/WMT_SOC.cfg
@@ -885,6 +888,7 @@ vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
 
 # FM Radio
+vendor/etc/init/init.fmradio_drv.rc
 vendor/firmware/fm_cust.cfg
 vendor/firmware/mt6631_fm_v1_coeff.bin
 vendor/firmware/mt6631_fm_v1_patch.bin
@@ -994,6 +998,7 @@ vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM1.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Test_SIM2.xml
 vendor/etc/gnss/carrier/agps_profiles_conf2_carrier_Verizon_Wireless.xml
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
+vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/slp_conf
 -vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
