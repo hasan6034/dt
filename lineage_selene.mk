@@ -26,6 +26,6 @@ PRODUCT_MODEL := Redmi 10
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="selene-user 13 TP1A.220624.014 V14.0.7.0.TKUINXM release-keys"
+    PRIVATE_BUILD_DESC="selene-user 13 TP1A.220624.014 V14.0.7.0.TKUMIXM release-keys"
 
-BUILD_FINGERPRINT := Redmi/selene/selene:12/TP1A.220624.014/V14.0.7.0.TKUINXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/selene/selene:12/TP1A.220624.014/V14.0.7.0.TKUMIXM:user/release-keys
