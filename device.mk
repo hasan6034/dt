@@ -177,7 +177,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl \
     libgatekeeper.vendor:64
 
 # GNSS
@@ -193,6 +192,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
+
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-impl.recovery \
+    android.hardware.health@2.1-service
 
 PRODUCT_PACKAGES += \
     android.hardware.health@1.0.vendor

@@ -818,7 +818,7 @@ vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/egl/egl.cfg
 vendor/lib64/arm.graphics-V1-ndk_platform.so
-vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6768.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
@@ -849,8 +849,8 @@ vendor/lib64/libpq_cust_base.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libpqparamparser.so
 vendor/lib64/libudf.so
-vendor/lib64/mt6768/libdpframework.so
-vendor/lib64/mt6768/libpq_prot.so
+vendor/lib64/mt6768/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
+vendor/lib64/mt6768/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
@@ -877,8 +877,8 @@ vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
 # DRVB
-vendor/lib/mt6768/libmtk_drvb.so
-vendor/lib64/mt6768/libmtk_drvb.so
+vendor/lib/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
+vendor/lib64/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 
 # Fingerprint
 vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.mt6768.so
@@ -974,7 +974,7 @@ vendor/lib/libfgauge_gm30.so
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.beanpod.so
-vendor/lib64/hw/libSoftGatekeeper.so
+vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.so
 
 # GNSS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
@@ -1197,7 +1197,7 @@ vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libvpu5.so
 
 # Media (Codec2)
-vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b;SYMLINK=vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 -vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/lib64/libadpcmdec_mtk.so
