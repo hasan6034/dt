@@ -872,7 +872,7 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib64/libwvhidl.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 
@@ -1001,8 +1001,8 @@ vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/init.gps_drv.rc
 vendor/etc/init/mtk_agpsd_p.rc
 vendor/etc/slp_conf
--vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
--vendor/etc/vintf/manifest/gnss@2.1-service.xml
+vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk.xml
+vendor/etc/vintf/manifest/gnss@2.1-service.xml
 vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
@@ -1011,16 +1011,16 @@ vendor/lib64/libmnl.so
 vendor/lib64/librpc.so
 vendor/lib64/libviagpsrpc.so
 
-# IMS
--system_ext/framework/mediatek-common.jar:framework/mediatek-common.jar
--system_ext/framework/mediatek-framework.jar:framework/mediatek-framework.jar
--system_ext/framework/mediatek-ims-base.jar:framework/mediatek-ims-base.jar
--system_ext/framework/mediatek-ims-common.jar:framework/mediatek-ims-common.jar
--system_ext/framework/mediatek-ims-extension-plugin.jar:framework/mediatek-ims-extension-plugin.jar
--system_ext/framework/mediatek-telecom-common.jar:framework/mediatek-telecom-common.jar
--system_ext/framework/mediatek-telephony-base.jar:framework/mediatek-telephony-base.jar
--system_ext/framework/mediatek-telephony-common.jar:framework/mediatek-telephony-common.jar
--system_ext/priv-app/ImsService/ImsService.apk:priv-app/ImsService/ImsService.apk|e88de927bd1c81f7aea42535f4eccbdf092cce1b
+# IMS from earth
+system_ext/framework/mediatek-common.jar:framework/mediatek-common.jar
+system_ext/framework/mediatek-framework.jar:framework/mediatek-framework.jar
+system_ext/framework/mediatek-ims-base.jar:framework/mediatek-ims-base.jar
+system_ext/framework/mediatek-ims-common.jar:framework/mediatek-ims-common.jar
+system_ext/framework/mediatek-ims-extension-plugin.jar:framework/mediatek-ims-extension-plugin.jar
+system_ext/framework/mediatek-telecom-common.jar:framework/mediatek-telecom-common.jar
+system_ext/framework/mediatek-telephony-base.jar:framework/mediatek-telephony-base.jar
+system_ext/framework/mediatek-telephony-common.jar:framework/mediatek-telephony-common.jar
+system_ext/priv-app/ImsService/ImsService.apk:priv-app/ImsService/ImsService.apk|e88de927bd1c81f7aea42535f4eccbdf092cce1b
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc
 system_ext/lib64/libcomutils.so
@@ -1199,7 +1199,7 @@ vendor/lib64/libvpu5.so
 # Media (Codec2)
 vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b;SYMLINK=vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
--vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
+vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/lib64/libadpcmdec_mtk.so
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
