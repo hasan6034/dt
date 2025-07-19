@@ -76,7 +76,8 @@ PRODUCT_PACKAGES += \
 
 # Ladder
 PRODUCT_PACKAGES += \
-    libunwindstack.vendor
+    libunwindstack.vendor \
+    libhidlbase_shim
 
 PRODUCT_PACKAGES += \
     BesLoudness \
@@ -167,7 +168,7 @@ PRODUCT_PACKAGES += \
     com.fingerprints.extension@1.0.vendor \
 
 PRODUCT_PACKAGES += \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
+    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor
 
 # FM
 PRODUCT_PACKAGES += \
@@ -236,7 +237,7 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light-service.xiaomi
+    android.hardware.light-service.lineage
 
 # Linker
 PRODUCT_COPY_FILES += \
@@ -320,12 +321,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # NFC
-PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.2-service \
-    com.android.nfc_extras \
-    NfcNci \
-    Tag
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
@@ -410,7 +405,6 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_PACKAGES += \
     libnetutils.vendor:64 \
-    libshim_sink \
     libui_shim
 
 PRODUCT_COPY_FILES += \
@@ -452,8 +446,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal \
     android.frameworks.sensorservice@1.0.vendor \
     libpower.vendor:64 \
-    libsensorndkbridge \
-    libshim_sensors
+    libsensorndkbridge
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -487,15 +480,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
-# VNDK
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-core/libbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib/libbinder-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-core/libbinder.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinder-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib/libhidlbase-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libhidlbase.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhidlbase-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libutils-v32.so \
-    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libutils-v32.so
-
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi-service \
@@ -526,7 +510,7 @@ PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 # Use a profile based boot image for this device. Note that this is currently a
 # generic profile and not Android Go optimized.
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/boot/boot-image-profile.txt
 
 # Do not generate libartd.
 PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false

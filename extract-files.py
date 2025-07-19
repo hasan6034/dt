@@ -20,7 +20,9 @@ from extract_utils.main import (
 
 namespace_imports = [
     'hardware/mediatek',
+    'hardware/mediatek/libmtkperf_client',
     'hardware/xiaomi',
+    'device/xiaomi/selene',
     'vendor/xiaomi/selene'
 ]
 
@@ -51,12 +53,10 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service': blob_fixup()
         .replace_needed('android.hardware.power-V2-ndk_platform.so', 'android.hardware.power-V2-ndk.so'),
     ('vendor/bin/mnld', 'vendor/lib64/libaalservice.so', 'vendor/lib64/libcam.utils.sensorprovider.so'): blob_fixup()
-        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so')
-        .add_needed('libshim_sensors.so'),
+        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so')
-        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so')
-        .add_needed('libshim_sensors.so'),
+        .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/libmtkcam_featurepolicy.so': blob_fixup()
         .binary_regex_replace(b'\x34\xE8\x87\x40\xB9', b'\x34\x28\x02\x80\x52'),
     ('vendor/lib64/libmtkcam_stdutils.so', 'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so'): blob_fixup()

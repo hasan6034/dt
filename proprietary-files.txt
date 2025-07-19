@@ -7,7 +7,7 @@ vendor/lib64/libaedv.so
 # Audio
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
-vendor/lib/hw/awinic.audio.effect.so
+vendor/lib/hw/awinic.audio.effect.so;FIX_SONAME
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
@@ -481,12 +481,10 @@ vendor/firmware/BT_FW.cfg
 vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbluetooth_mtk_pure.so
-vendor/lib/libbluetooth_relayer.so
 vendor/lib/libbt-vendor.so
 vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbluetooth_mtk_pure.so
-vendor/lib64/libbluetooth_relayer.so
 vendor/lib64/libbt-vendor.so
 
 # Bluetooth (Firmware) - from A145PXXU1AWA3
@@ -881,8 +879,8 @@ vendor/lib/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib64/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.mt6768.so
-vendor/lib64/hw/gf_fingerprint.default.so
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.mt6768.so;FIX_SONAME
+vendor/lib64/hw/gf_fingerprint.default.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
@@ -1201,6 +1199,7 @@ vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b;SYMLINK=vendor/bin/hw/a
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/lib64/libadpcmdec_mtk.so
+vendor/lib64/libalacdec_mtk.so
 vendor/lib64/libcodec2_mtk_c2store.so
 vendor/lib64/libcodec2_mtk_vdec.so
 vendor/lib64/libcodec2_mtk_venc.so
