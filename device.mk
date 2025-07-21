@@ -80,7 +80,6 @@ PRODUCT_PACKAGES += \
     libhidlbase_shim
 
 PRODUCT_PACKAGES += \
-    BesLoudness \
     MtkInCallService
 
 PRODUCT_COPY_FILES += \
@@ -244,6 +243,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Lineage Health
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
@@ -380,13 +380,6 @@ PRODUCT_PACKAGES += \
 
 # Properties
 include $(LOCAL_PATH)/configs/props/vendor_logtag.mk
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/board_id/odm,$(TARGET_COPY_OUT_ODM)/etc/properties) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/board_id/product,$(TARGET_COPY_OUT_PRODUCT)/etc/properties) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/board_id/system,$(TARGET_COPY_OUT_SYSTEM)/etc/properties) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/board_id/system_ext,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/properties) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/props/board_id/vendor,$(TARGET_COPY_OUT_VENDOR)/etc/properties)
 
 # Radio
 PRODUCT_PACKAGES += \
