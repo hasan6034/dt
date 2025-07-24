@@ -342,11 +342,13 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     CarrierConfigOverlaySelene \
+    DialerOverlaySelene \
     FrameworksResOverlaySelene \
     SettingsOverlaySelene \
     SystemUIOverlaySelene \
     TelephonyOverlaySelene \
-    WifiResOverlaySelene
+    TetheringConfigOverlay \
+    WifiOverlaySelene
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
